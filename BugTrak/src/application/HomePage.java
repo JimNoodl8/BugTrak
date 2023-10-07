@@ -47,6 +47,16 @@ public class HomePage extends Application {
         // Customize button size
         createButton.setMinSize(100, 30);
         createButton.setMaxSize(100, 30);
+        
+        // Set an event handler for the button click
+        createButton.setOnAction(e -> {
+            // Instantiate an object of NewProjectPage class
+            NewProjectPage newProjectPage = new NewProjectPage();
+
+            // Create a new scene with NewProjectPage and set it to the stage
+            Scene newProjectScene = new Scene(newProjectPage, 800, 500);
+            primaryStage.setScene(newProjectScene);
+        });
 
         // Create a VBox for the bottom section
         VBox bottomVBox = new VBox(createButton);
